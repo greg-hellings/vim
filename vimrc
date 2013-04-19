@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set number
 
 inoremap <M-Right>   <Esc>gti
 inoremap <M-Left>    <Esc>gTi
