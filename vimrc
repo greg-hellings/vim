@@ -26,3 +26,6 @@ let Tlist_Exit_OnlyWindow 	= 1
 let Tlist_Use_Right_Window 	= 1
 map <F3>       <Esc>:TlistToggle<Cr>
 map <S-F5>     <Esc>:!/usr/bin/ctags -R --fields=+ialS --extra=+q . <Cr>
+
+map <F2>	<Esc>\be
+set hidden
