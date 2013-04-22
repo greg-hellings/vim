@@ -1,7 +1,11 @@
 execute pathogen#infect()
-syntax on
+set nocompatible
 filetype plugin indent on
+syntax enable
 set number
+
+let g:php_folding=2
+set foldmethod=syntax
 
 inoremap <M-Right>   <Esc>gti
 inoremap <M-Left>    <Esc>gTi
