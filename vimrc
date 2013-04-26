@@ -29,3 +29,17 @@ map <S-F5>     <Esc>:!/usr/bin/ctags -R --fields=+ialS --extra=+q . <Cr>
 
 map <F2>	<Esc>\be
 set hidden
+
+" Creates the directory for a file if it doesn't already exist.
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
