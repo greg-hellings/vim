@@ -1,3 +1,7 @@
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 execute pathogen#infect()
 set nocompatible
 filetype plugin indent on
