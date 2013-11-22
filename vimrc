@@ -9,17 +9,14 @@ syntax enable
 set number
 
 let g:php_folding=2
+let g:ctrlp_working_path_mode = 'ra'
 set foldmethod=syntax
 
-map <F3> <Esc>:%s/\t/        /g
-
-map <F5> <Esc>:EnableFastPHPFolds<Cr>
-map <F6> <Esc>:EnablePHPFolds<Cr>
-map <F7> <Esc>:DisablePHPFolds<Cr>
-
-map <F4> <Esc>:NERDTreeToggle<Cr>
-
 map <F2>	<Esc>\be
+map <F3> <Esc>:%s/\t/        /g
+map <F4> <Esc>:NERDTreeToggle<Cr>
+map <F5> <Esc>:CtrlP<Cr>
+
 set hidden
 
 " Creates the directory for a file if it doesn't already exist.
