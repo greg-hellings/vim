@@ -4,6 +4,7 @@ set expandtab
 
 execute pathogen#infect()
 set nocompatible
+set mouse=a
 filetype plugin indent on
 syntax enable
 set number
