@@ -16,7 +16,7 @@ set foldmethod=syntax
 map <F2>	<Esc>\be
 map <F3> <Esc>:%s/\t/        /g
 map <F4> <Esc>:NERDTreeToggle<Cr>
-map <F5> <Esc>:CtrlP<Cr>
+map <F6> <Esc>:CtrlP<Cr>
 
 set hidden
 
