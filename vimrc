@@ -11,7 +11,7 @@ set number
 
 let g:php_folding=2
 let g:ctrlp_working_path_mode = 'ra'
-set foldmethod=syntax
+set foldmethod=indent
 
 map <F2>	<Esc>\be
 map <F3> <Esc>:%s/\t/        /g
