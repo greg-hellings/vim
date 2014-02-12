@@ -58,18 +58,18 @@ endfunction
 
 " Loads a session if it exists
 function! LoadSession()
-  if argc() == 0
+    let b:args = []
+    let b:loadsession = 1
     let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
     let b:sessionfile = b:sessiondir . "/session.vim"
-    if (filereadable(b:sessionfile))
-      exe 'source ' b:sessionfile
-    else
-      echo "No session loaded."
+    for arg in argv()
+        if (!isdirectory(arg) && filereadable(arg))
+            let b:loadsession = 0
+        endif
+    endfor
+    if ( b:loadsession == 1 && filereadable(b:sessionfile) )
+        exe 'source ' b:sessionfile
     endif
-  else
-    let b:sessionfile = ""
-    let b:sessiondir = ""
-  endif
 endfunction
 
 au VimEnter * nested :call LoadSession()
