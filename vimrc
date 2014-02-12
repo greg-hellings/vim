@@ -21,7 +21,7 @@ map <F6> <Esc>:CtrlP<Cr>
 set hidden
 
 " Creates the directory for a file if it doesn't already exist.
-function s:MkNonExDir(file, buf)
+function! s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
         let dir=fnamemodify(a:file, ':h')
         if !isdirectory(dir)
