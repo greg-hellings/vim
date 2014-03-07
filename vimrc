@@ -18,6 +18,12 @@ map <F3> <Esc>:%s/\t/        /g
 map <F4> <Esc>:NERDTreeToggle<Cr>
 map <F6> <Esc>:CtrlP<Cr>
 
+" Allows use of Ctrl-hjkl to swich splits without resizing them
+map <C-j> <C-w>j<C-w><Cr>
+map <C-k> <C-w>k<C-w><Cr>
+map <C-h> <C-w>h<C-w><Cr>
+map <C-l> <C-w>l<C-w><Cr>
+
 set hidden
 
 " Creates the directory for a file if it doesn't already exist.
