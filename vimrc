@@ -80,4 +80,4 @@ endfunction
 
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()
-map <leader>m :call MakeSession()<CR>
+map <F9> :call MakeSession()<CR>
